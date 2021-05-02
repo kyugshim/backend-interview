@@ -1,26 +1,35 @@
 {
-  "name": "backend-interview",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/Fetching-Korea/backend-interview.git",
-  "author": "startergate <startergate36@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "tsc && node ./dist/bin/www",
-    "build": "tsc",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/bin/www.ts"
-  },
-  "dependencies": {
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
-    "express-promise-router": "^4.1.0",
-    "mysql2": "^2.2.5"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.11",
-    "@types/node": "^14.14.37",
-    "nodemon": "^2.0.7",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
-  }
+    "name": "backend-interview",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/Fetching-Korea/backend-interview.git",
+    "author": "startergate <startergate36@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "tsc && node ./dist/bin/www",
+        "build": "tsc",
+        "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/bin/www.ts"
+    },
+    "keywords": [],
+    "devDependencies": {
+        "@types/express-fileupload": "^1.1.5",
+        "@types/jsonwebtoken": "^8.5.0",
+        "@types/morgan": "^1.9.2",
+        "@types/mysql2": "github:types/mysql2",
+        "@types/bcrypt": "^3.0.0",
+        "@types/express": "^4.17.8",
+        "nodemon": "^2.0.6",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.5"
+    },
+    "dependencies": {
+        "bcrypt": "^5.0.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-fileupload": "^1.2.0",
+        "express-validator": "^6.6.1",
+        "jsonwebtoken": "^8.5.1",
+        "morgan": "^1.10.0",
+        "mysql2": "^2.2.5"
+    }
 }
