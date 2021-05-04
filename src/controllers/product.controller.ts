@@ -16,9 +16,23 @@ export async function getProducts(req: Request, res: Response): Promise<Response
 export async function getProduct(req: Request, res: Response): Promise<Response> {
     const id = req.params.productId;
 
-    const product: Product = await SelectProductByID(id);
+    try {
+        const product: Product = await SelectProductByID(id);
 
-    return res.json(product);
+        return res.json({
+            success: true,
+            product: {
+                name: product.name,
+                brand: product.brand,
+                size: product.size,
+                color: product.color,
+            }
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server Error',
+        });
+    }
 }
 
 // Get all products from Items 
